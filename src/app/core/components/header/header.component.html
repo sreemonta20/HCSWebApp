@@ -1,0 +1,33 @@
+<header class="header-content">
+  <div class="left-part">
+    <div class="header-logo">
+      <!-- <img src="/assets/logo.svg" class="logo-icon" /> -->
+      <img src="/assets/hcslogo.png" class="logo-icon" />
+      <div class="logo-text">HEALTHCARE SOLUTIONS </div>
+    </div>
+    <div class="navigation-button">
+      <!-- <div>Home</div>
+      <div>Features</div>
+      <div>About us</div> -->
+    </div>
+  </div>
+  <div class="right-part" *ngIf="isLoggedIn">
+    <!-- <button *ngIf="router.url == '/login'" [routerLink]="['/register']" mat-raised-button color="primary">
+      Sign up
+    </button> -->
+    <!-- <button *ngIf="router.url == '/register'" [routerLink]="['/login']" mat-raised-button color="primary">
+      Sign in
+    </button> -->
+
+    <button  [routerLink]="['/home']" mat-raised-button color="primary">Home</button> &nbsp;&nbsp;&nbsp;
+
+    <button  [routerLink]="['/usermanagement']" mat-raised-button color="primary">Manage User</button> &nbsp;&nbsp;&nbsp;
+    
+    <button  (click)="signOut()" mat-raised-button color="primary">Sign out</button>
+
+    <!-- <button  [routerLink]="['/home']" mat-raised-button color="primary">Home</button>
+    
+    <button *ngIf="router.url == '/usermanagement'" (click)="signOut()" mat-raised-button color="primary">Sign out</button> -->
+  </div>
+</header>
+
